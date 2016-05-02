@@ -1,0 +1,29 @@
+<div class="container-fluid text-center" ng-init="localInit()">
+	<div class="row content">
+		<div class="col-sm-2 sidenav">
+			<p>
+				<a role="button" ng-click="goHome();">Home</a>
+			</p>
+			<p>
+				<a role="button" ng-click="registerForCourse();" ng-show='isNotRegd'>Register</a>
+			</p>
+			<p>
+				<a role="button" ng-click="unregisterFromCourse();" ng-show='isRegd'>Unregister</a>
+			</p>
+			<p>
+				<a role="button" ng-click="uploadDocs();" ng-show='isOwn'>Upload</a>
+			</p>
+			<p>
+				<a role="button" ng-click="goToPool();">Question Pool</a>
+			</p>
+			<p>
+				<a role="button" ng-click="goToArchives();">Archives</a>
+			</p>
+		</div>
+		<div class="col-sm-8 text-left">
+			<p>{{courseDescription}}</p>
+			<h3>The course instructor's email:</h3>
+			<p>{{orgEmail}}</p>
+		</div>
+	</div>
+</div>

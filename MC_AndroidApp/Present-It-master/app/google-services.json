@@ -1,0 +1,52 @@
+{
+  "project_info": {
+    "project_id": "presentit-1283",
+    "project_number": "180475096413",
+    "name": "PresentIt"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180475096413:android:90d47c738b32bfea",
+        "client_id": "android:com.usergo.presentit",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.usergo.presentit",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180475096413-4tndbar6klrirdb6199hmk1512driovp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.usergo.presentit",
+            "certificate_hash": "8CF4BF9DE942C592C9D6EEC566CD27F06A5E90DB"
+          }
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

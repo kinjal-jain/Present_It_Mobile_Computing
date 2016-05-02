@@ -1,0 +1,43 @@
+<div class="container-fluid text-center" ng-init = "localInit()">
+	<div class="row content">
+		<div class="col-sm-2 sidenav">
+			<p>
+				<a role="button" ng-click="goHome();">Home</a>
+			</p>
+			<p>
+				<a role = "button" ng-click="goToProfile();">Profile</a>
+			</p>
+			<p>
+				<a role = "button" ng-click = "goToCourseCreate();">Create Course</a>
+			</p>
+			<p>
+				<a role="button" ng-click="goToSearch();">Search Course</a>
+			</p>
+		</div>
+		<div class="col-sm-8 text-left">
+			<form name = "courseCreateForm">
+			  <div class="form-group">
+			    <label for="courseId">Course-Id</label>
+			    <input type="text" class="form-control" id="courseId" ng-model='courseCreate.courseId'>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="courseName">Course Name</label>
+			    <input type="text" class="form-control" id="courseName" ng-model='courseCreate.courseName'>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="maxAttendees">Max Attendees</label>
+			    <input type="number" class="form-control" id="maxAttendees" ng-model='courseCreate.maxAttendees'>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="description">Course Description</label>
+			    <input type="text" class="form-control" id="description" ng-model='courseCreate.description'>
+			  </div>
+			  
+			  <button type="submit" class="btn btn-default" ng-click = "createCourse(courseCreateForm);">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>

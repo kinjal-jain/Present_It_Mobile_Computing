@@ -1,0 +1,64 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+repositories {
+    maven {
+        url 'http://google-api-client-libraries.appspot.com/mavenrepo'
+    }
+    mavenCentral()
+    mavenLocal()
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.usergo.presentit"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main { java.srcDirs = ['src/main/java', 'src/main/java/com/usergo/presentit/GeneralUtils'] }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+    // BEGIN Google APIs
+    // Play Services will validate the application prior to allowing OAuth2 access.
+    compile 'com.google.android.gms:play-services-auth:8.4.0'
+    compile 'com.google.apis:google-api-services-oauth2:v1-rev111-1.21.0'
+    compile files('libs/presentIt-v1-1.21.0-SNAPSHOT.jar')
+
+    // Add the Android extensions for the Google API client library.
+    // This will automatically include play services as long as you have download that library
+    // from the Android SDK manager.
+    // Add the Android extensions for the Google API client library.
+    compile(group: 'com.google.api-client', name: 'google-api-client-android', version: '1.18.0-rc') {
+        // Exclude play services, since we're not using this yet.
+        exclude(group: 'com.google.android.google-play-services', module: 'google-play-services')
+        exclude(group: 'org.apache.httpcomponents', module: 'httpclient')
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,43 @@
+<div class="container-fluid text-center" ng-init = "localInit()">
+	<div class="row content">
+		<div class="col-sm-2 sidenav">
+			<p>
+				<a role="button" ng-click="goHome();">Home</a>
+			</p>
+			<p>
+				<a role="button" ng-click="registerForCourse();">Register</a>
+			</p>
+			<p>
+				<a role="button" ng-click="unregisterFromCourse();">Unregister</a>
+			</p>
+			<p>
+				<a  role="button" ng-click="uploadDocs();">Upload</a>
+			</p>
+			<p>
+				<a role="button" ng-click="goToPool();">Question Pool</a>
+			</p>
+			<p>
+				<a role="button" ng-click="goToArchives();">Archives</a>
+			</p>
+		</div>
+		<div class="col-sm-8 text-left">
+		
+		<!-- The beginning of the form -->
+		<form name = "uploadForm">
+			  
+			  <div class="form-group">
+			    <label for="month">Month</label>
+			    <input type="text" class="form-control" id="month" ng-model='upload.month'>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="filePicker">Upload the file here</label>
+			    <input type="file" class="form-control" id="filePicker">
+			  </div>
+			  <button type="submit" class="btn btn-default" ng-click = "uploadFile(uploadForm);">Upload</button>
+			</form>
+		<!-- The end of the form -->
+		
+		</div>
+	</div>
+</div>

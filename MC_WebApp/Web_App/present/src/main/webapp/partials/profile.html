@@ -1,0 +1,42 @@
+<div class="container-fluid text-center" ng-init = "localInit()">
+	<div class="row content">
+		<div class="col-sm-2 sidenav">
+			<p>
+				<a role="button" ng-click="goHome();">Home</a>
+			</p>
+			<p>
+				<a role = "button" ng-click="goToProfile();">Profile</a>
+			</p>
+			<p>
+				<a role = "button" ng-click = "goToCourseCreate();">Create Course</a>
+			</p>
+			<p>
+				<a role="button" ng-click="goToSearch();">Search Course</a>
+			</p>
+		</div>
+		<div class="col-sm-8 text-left">
+			<form name = "profileForm">
+			  <div>
+			    <label>Email address</label>
+			    <p>{{userEmail}}</p>
+			  </div>
+			  <div class="form-group">
+			    <label for="firstName">First Name</label>
+			    <input type="text" class="form-control" id="firstName" ng-model='profile.firstName'>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="lastName">Last Name</label>
+			    <input type="text" class="form-control" id="lastName" ng-model='profile.lastName'>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="ufid">UFID</label>
+			    <input type="text" class="form-control" id="ufid" ng-model='profile.ufid'>
+			  </div>
+			  
+			  <button type="submit" class="btn btn-default" ng-click = "updateProfile(profileForm);">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>

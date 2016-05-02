@@ -1,0 +1,490 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://curious-truth-1245.appspot.com/_ah/api",
+  "name" : "presentIt",
+  "version" : "v1",
+  "description" : "API for the Present It Backend application.",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://curious-truth-1245.appspot.com/_ah/spi",
+    "deadline" : 65.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "methods" : {
+    "presentIt.getCourse" : {
+      "path" : "course/{websafeCourseKey}",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.getCourse",
+      "request" : {
+        "parameters" : {
+          "websafeCourseKey" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "presentIt.getCoursesCreated" : {
+      "path" : "getCoursesCreated",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.getCoursesCreated",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "presentIt.isRegdForCourse" : {
+      "path" : "isRegdForCourse",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.isRegdForCourse",
+      "request" : {
+        "parameters" : {
+          "websafeCourseKey" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "presentIt.insertPersonContentRoot" : {
+      "path" : "insertPersonContentRoot",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.insertPersonContentRoot",
+      "request" : {
+        "parameters" : {
+          "parentFolder" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "presentIt.sayHello" : {
+      "path" : "sayHello",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.sayHello",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "presentIt.getAllCourses" : {
+      "path" : "getAllCourses",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.getAllCourses",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "presentIt.savePersonProfile" : {
+      "path" : "savePersonProfile",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.savePersonProfile",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "presentIt.createCourse" : {
+      "path" : "home",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.createCourse",
+      "request" : {
+        "body" : "autoTemplate(backendRequest)",
+        "bodyName" : "resource"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "presentIt.insertCourseContentRoot" : {
+      "path" : "insertCourseContentRoot",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.insertCourseContentRoot",
+      "request" : {
+        "parameters" : {
+          "websafeCourseKey" : {
+            "type" : "string",
+            "required" : true
+          },
+          "courseFolder" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "empty"
+      }
+    },
+    "presentIt.unregisterFromCourse" : {
+      "path" : "course/{websafeCourseKey}/registration",
+      "httpMethod" : "DELETE",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.unregisterFromCourse",
+      "request" : {
+        "parameters" : {
+          "websafeCourseKey" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "presentIt.getCoursesToAttend" : {
+      "path" : "getCoursesToAttend",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.getCoursesToAttend",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "presentIt.registerForCourse" : {
+      "path" : "course/{websafeCourseKey}/registration",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.registerForCourse",
+      "request" : {
+        "parameters" : {
+          "websafeCourseKey" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "presentIt.isOwner" : {
+      "path" : "isOwner",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.isOwner",
+      "request" : {
+        "parameters" : {
+          "websafeCourseKey" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "presentIt.getPersonProfile" : {
+      "path" : "home",
+      "httpMethod" : "GET",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ ],
+      "clientIds" : [ "774746967693-o97vro5dpmdfe51ee61m0sjikhk9m3t4.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "rosyMethod" : "com.google.devrel.training.present.spi.PresentItApi.getPersonProfile",
+      "request" : {
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "Course" : {
+        "id" : "Course",
+        "type" : "object",
+        "properties" : {
+          "courseId" : {
+            "type" : "string"
+          },
+          "courseName" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "contentRoot" : {
+            "type" : "string"
+          },
+          "maxAttendees" : {
+            "type" : "integer"
+          },
+          "organizerEmail" : {
+            "type" : "string"
+          },
+          "seatsAvailable" : {
+            "type" : "integer"
+          },
+          "websafeKey" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string",
+            "format" : "int64"
+          }
+        }
+      },
+      "CourseCollection" : {
+        "id" : "CourseCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "Course"
+            }
+          }
+        }
+      },
+      "WrappedBoolean" : {
+        "id" : "WrappedBoolean",
+        "type" : "object",
+        "properties" : {
+          "result" : {
+            "type" : "boolean"
+          },
+          "reason" : {
+            "type" : "string"
+          }
+        }
+      },
+      "HelloClass" : {
+        "id" : "HelloClass",
+        "type" : "object",
+        "properties" : {
+          "message" : {
+            "type" : "string"
+          }
+        }
+      },
+      "PersonalProfileForm" : {
+        "id" : "PersonalProfileForm",
+        "type" : "object",
+        "properties" : {
+          "firstName" : {
+            "type" : "string"
+          },
+          "lastName" : {
+            "type" : "string"
+          },
+          "ufid" : {
+            "type" : "string"
+          }
+        }
+      },
+      "Person" : {
+        "id" : "Person",
+        "type" : "object",
+        "properties" : {
+          "firstName" : {
+            "type" : "string"
+          },
+          "lastName" : {
+            "type" : "string"
+          },
+          "ufid" : {
+            "type" : "string"
+          },
+          "contentRoot" : {
+            "type" : "string"
+          },
+          "courseKeysToAttend" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "email" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CourseForm" : {
+        "id" : "CourseForm",
+        "type" : "object",
+        "properties" : {
+          "courseId" : {
+            "type" : "string"
+          },
+          "courseName" : {
+            "type" : "string"
+          },
+          "maxAttendees" : {
+            "type" : "integer"
+          },
+          "description" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "methods" : {
+      "com.google.devrel.training.present.spi.PresentItApi.getCourse" : {
+        "response" : {
+          "$ref" : "Course"
+        }
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.getCoursesCreated" : {
+        "response" : {
+          "$ref" : "CourseCollection"
+        }
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.isRegdForCourse" : {
+        "response" : {
+          "$ref" : "WrappedBoolean"
+        }
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.insertPersonContentRoot" : {
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.sayHello" : {
+        "response" : {
+          "$ref" : "HelloClass"
+        }
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.getAllCourses" : {
+        "response" : {
+          "$ref" : "CourseCollection"
+        }
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.savePersonProfile" : {
+        "request" : {
+          "$ref" : "PersonalProfileForm"
+        },
+        "response" : {
+          "$ref" : "Person"
+        }
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.createCourse" : {
+        "request" : {
+          "$ref" : "CourseForm"
+        },
+        "response" : {
+          "$ref" : "Course"
+        }
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.insertCourseContentRoot" : {
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.unregisterFromCourse" : {
+        "response" : {
+          "$ref" : "WrappedBoolean"
+        }
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.getCoursesToAttend" : {
+        "response" : {
+          "$ref" : "CourseCollection"
+        }
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.registerForCourse" : {
+        "response" : {
+          "$ref" : "WrappedBoolean"
+        }
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.isOwner" : {
+        "response" : {
+          "$ref" : "WrappedBoolean"
+        }
+      },
+      "com.google.devrel.training.present.spi.PresentItApi.getPersonProfile" : {
+        "response" : {
+          "$ref" : "Person"
+        }
+      }
+    }
+  }
+}

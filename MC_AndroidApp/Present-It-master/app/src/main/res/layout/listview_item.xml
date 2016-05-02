@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- the parent view - provides the whitw background -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center_vertical"
+    android:background="#ffffff"
+    android:padding="5dp" >
+    
+    <!-- the innner view - provides the pink rectangle -->
+    <RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+        android:background="@drawable/custom_list_element" >
+        
+        <!-- the icon view -->
+    	<ImageView android:id="@+id/ivIcon"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:padding="5dp"
+		    android:contentDescription="content description"
+		    android:scaleType="fitXY"
+		    android:layout_alignParentLeft="true" />
+		
+    	<!-- the container view for the title and description -->
+		<RelativeLayout android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_toRightOf="@id/ivIcon"
+		    android:layout_centerVertical="true" >
+		    
+		    <!-- the title view -->
+		    <TextView android:id="@+id/tvCourseID"
+			    android:layout_width="wrap_content"
+				android:padding="5dp"
+			    android:layout_height="wrap_content"
+				android:textColor="#ffffff"
+				android:textStyle="bold"
+			    android:textAppearance="@android:style/TextAppearance.Large" />
+		    
+		    <!-- the description view -->
+		    <TextView android:id="@+id/tvCourseName"
+		        android:layout_below="@id/tvCourseID"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:textColor="#ffffff"
+				android:textStyle="normal"
+				android:padding="5dp"
+			    android:textAppearance="@android:style/TextAppearance.Medium" />
+		</RelativeLayout>   
+        
+    </RelativeLayout>
+    
+</RelativeLayout>
